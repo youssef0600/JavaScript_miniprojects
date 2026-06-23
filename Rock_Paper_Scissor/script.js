@@ -19,30 +19,38 @@ const computerScoreNum = document.getElementById("computer-score")
 const startBtn = document.getElementById("start-btn") ;
 
 function checkWinner(){
-    if (humanScore===5 && computerScore<5){
-        alert("You Win The Game 🥳") ;
-        gameStarted = false ;
-    }else if(computerScore===5 && humanScore<5){
-        alert("You Lose! Good Luck next time.") ;
-        gameStarted = false ;
+    if (humanScore === 5){
+        alert("You Win The Game 🥳");
+        gameStarted = false;
+
+        rockBtn.disabled = true;
+        paperBtn.disabled = true;
+        scissorBtn.disabled = true;
+        startBtn.disabled = false;
     }
-    rockBtn.disabled = true;
-    paperBtn.disabled = true;
-    scissorBtn.disabled = true;
+    else if (computerScore === 5){
+        alert("You Lose! Good Luck next time.");
+        gameStarted = false;
+
+        rockBtn.disabled = true;
+        paperBtn.disabled = true;
+        scissorBtn.disabled = true;
+        startBtn.disabled = false;
+    }
 }
 
 const result = document.getElementById("result") ;
 
 function playRound(humainChoice ,computerChoice ){
     if ( humainChoice===computerChoice ) {
-        result.textContent = `Draw! both you chose ${humainChoice}` ;
+        result.innerHTML = `<img src="./images/attention2.png" alt="attention-logo" width="10%"> GameDraw! both you chose ${humainChoice}` ;
     }else if ((humainChoice==="rock" && computerChoice==="scissor") ||
     (humainChoice==="paper" && computerChoice==="rock") ||
     (humainChoice==="scissor" && computerChoice==="paper") ){
-        result.textContent = `You win! ${humainChoice} beats ${computerChoice}` ;
+        result.innerHTML = `You win 🎉! ${humainChoice} beats ${computerChoice}` ;
         humanScore++ ;
     }else{
-        result.textContent = `Computer win! ${computerChoice} beats ${humainChoice}` ;
+        result.innerHTML = `Computer win 💻! ${computerChoice} beats ${humainChoice}` ;
         computerScore++ ;
     }
     humanScoreNum.textContent = humanScore ;
@@ -58,8 +66,11 @@ startBtn.addEventListener("click" ,function(){
     computerScore = 0;
     humanScoreNum.textContent = 0;
     computerScoreNum.textContent = 0;
-    result.textContent = "Game Started!";
+    result.innerHTML = `<img src="./images/attention2.png" alt="attention-logo" width="10%"><p>Press Start Game</p>`;
     startBtn.disabled = true;
+    rockBtn.disabled = false;
+    paperBtn.disabled = false;
+    scissorBtn.disabled = false;
 });
 
 rockBtn.addEventListener("click" ,function(){
@@ -93,4 +104,7 @@ resetBtn.addEventListener("click" ,function(){
     result.innerHTML = `<img src="./images/attention2.png" alt="attention-logo" width="10%"><p>Press Start Game</p>`;
     gameStarted = false;
     startBtn.disabled = false;
+    rockBtn.disabled = true;
+    paperBtn.disabled = true;
+    scissorBtn.disabled = true;
 })
