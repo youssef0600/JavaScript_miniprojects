@@ -1,58 +1,19 @@
-# Rock Paper Scissors
+# Rock Paper Scissors Game
 
-A simple Rock Paper Scissors game built with JavaScript as part of The Odin Project Foundations course.
+A simple Rock Paper Scissors game built with:
+
+- HTML
+- CSS
+- JavaScript
 
 ## Features
 
-- Random computer choice
-- Human input using prompt()
-- Five-round game loop
+- Play against the computer
 - Score tracking
-- Winner announcement
-- Input validation
-
-## Concepts Practiced
-
-### JavaScript Fundamentals
-
-- Variables
-- Functions
-- If / Else statements
-- Comparison operators
-- Logical operators
-- Loops
-- Template literals
-- Math.random()
-- Prompt
-- Return statements
-
-## Game Rules
-
-- Rock beats Scissors.
-- Scissors beats Paper.
-- Paper beats Rock.
-- The game consists of five rounds.
-- The player with the highest score wins.
-
-## File Structure
-
-```
-.
-├── index.html
-├── javascript.js
-└── README.md
-```
-
-## Future Improvements
-
-- Add buttons instead of prompt()
-- Use DOM manipulation
-- Display score on the page
-- Improve UI with CSS
-- Add restart button
+- Start and Reset buttons
+- Interactive GUI
+- Separate console version
 
 ## Author
 
 Youssef Bouyzourne
-
-Built while learning JavaScript through The Odin Project.
