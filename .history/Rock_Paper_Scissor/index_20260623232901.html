@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <header>
+        <span class="sp-rock">ROCK</span>.<span class="sp-paper">Paper</span>.<span class="sp-scissor">Scissor</span><br><br>
+        <span class="sp-title">Play against the computer</span>
+    </header>
+
+    <main>
+        <div class="score-board">
+            <div class="player">
+                <h3>You</h3>
+                <p id="human-score">0</p>
+            </div>
+            <img class="img-vs" src="./images/vs-logo.png" alt="vs image">
+            <div class="computer">
+                <h3>Computer</h3>
+                <p id="computer-score">0</p>
+            </div>
+        </div>
+
+        <div id="result">
+            <img src="./images/attention2.png" alt="attention-logo" width="10%" height="auto">
+            <p>Press Start Game</p>
+        </div>
+
+        <div class="start">Make your choice 👇</div>
+
+        <div class="choices">
+            <button id="rock-btn" disabled>
+                <img src="./images/rock_2.png" alt="rock-logo">
+                Rock
+            </button>
+            <button id="paper-btn" disabled>
+                <img src="./images/paper1.png" alt="paper-logo">
+                Paper
+            </button>
+            <button id="scissor-btn" disabled>
+                <img src="./images/scissor1.png" alt="scissor-logo">
+                scissor
+            </button>
+        </div>
+
+        <button id="start-btn">
+            <img src="./images/right.png" alt="">
+            <p>Start the game</p>
+            <img src="./images/start2.png" alt="start-logo">
+        </button>
+
+        <button class="reset-btn-C">
+            <img src="./images/reset.png" alt="reset-logo" width="25%" height="auto">
+            <span id="reset-btn">Reset</span>
+        </button>
+    </main>
+
+    <footer>
+        <div class="contact-me">
+            <a href="https://github.com/youssef0600" target="_blank">
+                <img id="github-logo" src="./images/github.png" alt="github-logo" width="2%" height="auto">
+            </a>
+            <a href="https://www.linkedin.com/in/youssef-bouyzourn-047b4b339/" target="_blank">
+                <img id="linkedin-logo" src="./images/linkedin.png" alt="github-logo" width="2%" height="auto">
+            </a>
+            <a href="mailto:bouyzourneyoussef@gmail.com" target="_blank">
+                <img id="email-logo" src="./images/email.png" alt="github-logo" width="2%" height="auto">
+            </a>
+        </div>
+        <span>Copyright © 2026 Bouyzourn Youssef</span>
+    </footer>
+
+    <script src="./script.js"></script>
+</body>
+</html>
